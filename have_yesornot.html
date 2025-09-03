@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <title>免费 Jvav 下载 - Jvav</title>
+</head>
+<!-- 广告弹窗 -->
+<div id="adModal" class="ad-modal">
+    <div class="ad-content">
+        <span class="ad-close">&times;</span>
+        <img src="./img/ad.png" alt="广告" class="ad-image">
+    </div>
+</div>
+<script>
+    // 广告显示控制
+    document.addEventListener('DOMContentLoaded', function() {
+        const adModal = document.getElementById('adModal');
+        const adClose = document.querySelector('.ad-close');
+        
+        setTimeout(function() {
+            adModal.style.display = 'block';
+            // 触发动画
+            setTimeout(function() {
+                adModal.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                adModal.style.backdropFilter = 'blur(5px)';
+                document.querySelector('.ad-content').style.transform = 'scale(1)';
+                document.querySelector('.ad-content').style.opacity = '1';
+            }, 10);
+        }, 0);
+        
+        // 点击关闭按钮关闭广告
+        adClose.addEventListener('click', function() {
+            adModal.style.display = 'none';
+        });
+    });
+</script>
+
+<script>
+    function check_jvav() {
+        // 隐藏按钮
+        const btn = document.querySelector('.btn');
+        if (btn) {
+            btn.style.display = 'none';
+        }
+        
+        // 获取.post元素和其中的hr元素
+        const postDiv = document.querySelector('.post');
+        const hrElement = postDiv.querySelector('hr');
+        
+        // 如果找到hr元素，删除它之后的所有内容
+        if (hrElement) {
+            let nextElement = hrElement.nextElementSibling;
+            while (nextElement) {
+                const toRemove = nextElement;
+                nextElement = nextElement.nextElementSibling;
+                toRemove.remove();
+            }
+        }
+        
+        // 添加加载动画
+        const loadingContent = `
+            <div style="text-align: center; padding: 20px;">
+                <i class="fa-regular fa-spinner fa-spin fa-spin-reverse"></i> 验证中...
+            </div>
+        `;
+        
+        // 在hr元素后添加加载动画
+        if (hrElement) {
+            hrElement.insertAdjacentHTML('afterend', loadingContent);
+        } else {
+            // 如果没有hr元素，直接添加到postDiv末尾
+            postDiv.innerHTML += loadingContent;
+        }
+        
+        // 延迟显示最终结果（模拟验证过程）
+        setTimeout(function() {
+            // 移除加载动画
+            const loadingElement = postDiv.querySelector('div[style*="text-align: center"]');
+            if (loadingElement) {
+                loadingElement.remove();
+            }
+            
+            // 创建并插入新内容
+            const newContent = `
+                <div class="notice">祝贺您！我们并没有在您的计算机中查找到 Jvav 安装。</div>
+                <p>如果您已安装 Jvav 并且在验证时没有检测到，这说明您的配置非常正确。由于Jvav 的先进技术已经不能满足浏览器的插件的运行，因此您无法在此页面检测 Jvav 安装是否正确。</p>
+                <p>大多数情况下，张浩扬博士会统一修复 Jvav 的安装错误，并控制每台计算机进行 迷你世界 开发等应用。</p>
+                <p>如果您的反间谍软件提示 Jvav 存在病毒，请勿惊慌，因为它就是一个计算机病毒。</p>
+                <a href="./have_yesornot.html" class="hre">尝试重新验证 Jvav</a><br>
+                <a href="./download.html" class="hre">免费 Jvav 下载</a>
+            `;
+            
+            // 在hr元素后添加新内容
+            if (hrElement) {
+                hrElement.insertAdjacentHTML('afterend', newContent);
+            } else {
+                // 如果没有hr元素，直接添加到postDiv末尾
+                postDiv.innerHTML += newContent;
+            }
+        }, 1500); // 1.5秒后显示结果
+    }
+</script>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="./index.html"><img src="./img/zhy.png" alt="JVAV-LOGO" class="img-zhy"></a><a href="./about.html"><img src="./img/favicon-jvav.png" alt="JVAV-LOGO" class="img-mod"></a> | <a href="./index.html"><img src="./img/favicon-modern.png" alt="MODERN" class="img-mod"></a></div>
+                <ul class="nav-links">
+                    <li><a href="./download.html">适用于桌面应用程序的 Jvav</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主横幅区域 -->
+    <!-- <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Jvav</h1>
+                <p>Jvav 是一款新型的面向对象编程语言，最初版本由 <strong>张浩杨</strong> 博士于公元 1025 年发布第一个版本，现在它由 Jvav 社区进行维护。</p>
+            </div>
+            <img src="./img/jvavUser.jpg" alt="Jvav 编程语言" class="hero-image">
+        </div>
+    </section> -->
+
+    <section class="articles">
+        <div class="container">
+            <div class="post">
+                <p class="notice"><strong>请特别注意！Jvav 一梗（可能）已经被滥用，并且其影响已经波及到玩笑梗以外的范围。请不要对张浩扬和其他涉及到 Jvav 的人物造成不必要的负面影响。</strong></p>
+                <hr>
+                <h3>验证 Jvav 版本</h3>
+                <p>单击以确保为您的操作系统安装了推荐的 Jvav 版本。</p>
+                <a class="btn" onclick="check_jvav()">验证 Jvav 版本</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,367 @@
+        @font-face {
+            font-family: 'JvavFont';
+            src: url("./fonts/oraclesansvf.woff2") format("woff2");
+        }
+
+        @font-face {
+            font-family: 'JvavFont-Logo';
+            src: url("./fonts/EDIX.ttf") format("truetype");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'JvavFont', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f1efed;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .img-zhy {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .img-mod {
+            height: 20px;
+            vertical-align: middle;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .articles .container {
+            width: 50%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 导航栏样式 */
+        header {
+            background-color: #3a75b0; /* 修改这一行 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0; /* 修改这一行，从15px改为8px */
+        }
+        
+        .logo {
+            font-size: 20px; /* 修改这一行，从24px改为20px */
+            color: #dfdfdf;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px; /* 修改这一行，从25px改为20px */
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e76f00;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #04536f;
+            color: white;
+            margin: 10px 0;
+            padding: 5px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #053242;
+        }
+
+        .post .btn {
+            display: inline-block;
+            background-color: #04536f;
+            color: white;
+            margin: 10px 0;
+            padding: 5px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .post .btn:hover {
+            background-color: #053242;
+        }
+        
+        /* 主横幅区域 */
+        .hero {
+            background: #04536f;
+            color: white;
+            padding: 40px 0; /* 修改这一行，从80px 0改为40px 0 */
+            text-align: center;
+            box-shadow: inset 0 0 0 1000px rgba(4, 83, 111, 0.8);
+            display: flex;
+            align-items: center;
+            min-height: 300px; /* 修改这一行，从400px改为300px */
+        }
+
+        .hero .container {
+            display: flex; /* 添加这一行 */
+            align-items: center; /* 添加这一行 */
+            justify-content: space-between; /* 添加这一行 */
+            width: 50%; /* 添加这一行 */
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: 10px; /* 修改这一行，从20px改为10px */
+            text-align: left;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px; /* 下划线长度 */
+            height: 6px; /* 下划线粗细 */
+            background-color: #f29111; /* 下划线颜色 */
+        }
+        
+        .hero p {
+            font-size: 0.9rem;
+            max-width: 700px;
+            margin: 0 auto 10px; /* 修改这一行，从30px改为15px */
+            text-align: left;
+        }
+
+        .hero a {
+            color: #e76f00;
+            font-weight: bold;
+        }
+
+        .hero-content {
+            flex: 1;
+            text-align: left;
+            max-width: 500px;
+        }
+
+        .hero-content h1 {
+            font-family: 'JvavFont-Logo';
+            font-size: rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            max-width: 450px;
+            height: auto;
+            margin-left: 40px;
+        }
+        
+        /* 内容区域 */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        /* .feature-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 25px;
+            width: 100%;
+            max-width: 450px;
+            transition: transform 0.3s;
+        } */
+
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 25px;
+            width: 100%;
+            max-width: 450px;
+            transition: transform 0.3s;
+            border: 1px solid #e0e0e0; /* 添加这一行 */
+        }
+
+        .feature-card .hre {
+            font-size: 0.9rem;
+            color: #04536f;
+            transition: color 0.3s;
+        }
+
+        .post .hre {
+            font-size: 0.9rem;
+            color: #04536f;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 简化响应式处理 */
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .feature-card {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero .container {
+                flex-direction: column;
+            }
+            
+            .hero-image {
+                margin-left: 0;
+                margin-top: 30px;
+                max-width: 450px;
+            }
+        }
+
+.post {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #04536f;
+}
+
+.about {
+    display: flex; /* 添加这一行 */
+    align-items: center; /* 添加这一行 */
+    gap: 20px; /* 添加这一行，设置图片和文本之间的间距 */
+    margin: 20px 0; /* 添加这一行，设置外边距 */
+}
+
+.post h3 {
+    color: #04536f;
+    margin-bottom: 10px;
+}
+
+.post h4 {
+    color: #04536f;
+    margin-bottom: 10px;
+}
+
+.post p {
+    margin-bottom: 10px;
+}
+
+.post a {
+    color: #04536f;
+    text-decoration: underline;
+}
+
+.post hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.post .notice {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffeeba;
+    padding: 10px;
+    margin: 15px 0;
+}
+        
+.post .gr{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+
+/* 广告弹窗样式 */
+.ad-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    backdrop-filter: blur(0);
+    transition: background-color 0.1s ease, backdrop-filter 0.1s ease;
+}
+
+.ad-content {
+    position: relative;
+    margin: 15% auto;
+    max-width: 600px;
+    background: transparent;
+    border-radius: 5px;
+    padding: 20px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.ad-close {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.ad-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

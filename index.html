@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <title>Jvav | Modern</title>
+</head>
+
+<!-- 广告弹窗 -->
+<div id="adModal" class="ad-modal">
+    <div class="ad-content">
+        <span class="ad-close">&times;</span>
+        <img src="./img/ad.png" alt="广告" class="ad-image">
+    </div>
+</div>
+<script>
+    // 广告显示控制
+    document.addEventListener('DOMContentLoaded', function() {
+        const adModal = document.getElementById('adModal');
+        const adClose = document.querySelector('.ad-close');
+        
+        // 显示广告
+        setTimeout(function() {
+            adModal.style.display = 'block';
+            // 触发动画
+            setTimeout(function() {
+                adModal.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                adModal.style.backdropFilter = 'blur(5px)';
+                document.querySelector('.ad-content').style.transform = 'scale(1)';
+                document.querySelector('.ad-content').style.opacity = '1';
+            }, 10);
+        }, 0);
+        
+        // 点击关闭按钮关闭广告
+        adClose.addEventListener('click', function() {
+            adModal.style.display = 'none';
+        });
+    });
+</script>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="./index.html"><img src="./img/zhy.png" alt="JVAV-LOGO" class="img-zhy"></a><a href="./about.html"><img src="./img/favicon-jvav.png" alt="JVAV-LOGO" class="img-mod"></a> | <a href="./index.html"><img src="./img/favicon-modern.png" alt="MODERN" class="img-mod"></a></div>
+                <ul class="nav-links">
+                    <li><a href="/download.html">适用于桌面应用程序的 Jvav</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主横幅区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Jvav</h1>
+                <!-- <img src="./img/favicon-jvav.png" alt="JVAV-LOGO" class="img-hero"> -->
+                <p>Jvav 是一款新型的面向对象编程语言，最初版本由 <strong>张浩杨</strong> 博士于公元 1025 年发布第一个版本，现由 Jvav 社区进行维护。仍是企业和开发人员的首选开发平台。<br><a href="./about.html">详细 →</a></p>
+            </div>
+            <img src="./img/jvavUser.jpg" alt="Jvav 编程语言" class="hero-image">
+        </div>
+    </section>
+
+    <!-- 特性介绍 -->
+    <section class="section">
+        <div class="container">
+            <!-- <h2 class="section-title">为什么选择 Jvav?</h2> -->
+            <div class="features">
+                <div class="feature-card">
+                    <!-- <div class="feature-icon">⚡</div> -->
+                    <h3>用于运行桌面应用程序的 Jvav</h3>
+                    <p>面向使用台式机和笔记本电脑的最终用户</p>
+                    <a href="./download.html" class="btn">下载适用于台式机的 Jvav</a><br>
+                    <a href="./whatis_jvav.html" class="hre">Jvav 是什么？</a>
+                </div>
+                <div class="feature-card">
+                    <!-- <div class="feature-icon">🔄</div> -->
+                    <h3>开发人员和企业管理员</h3>
+                    <p>一次编写，到处拉石。来自 Jvav 管理者 Modern 的免费 Jvav 开发工具包 (JBK) 下载和资源</p>
+                    <a href="./download.html" class="hre">开发人员下载</a><br>
+                    <a href="./download.html" class="hre">开发人员资源</a><br>
+                    <a href="./download.html" class="hre">企业资源</a><br>
+                    <a href="./download.html" class="hre">CloseJBK 抢先体验版</a>
+                </div>
+                <!-- <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>安全可靠</h3>
+                    <p>强大的类型系统、内存管理和异常处理机制使Jvav成为构建关键任务应用程序的理想选择。</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 代码示例
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">简单的 Jvav 代码示例</h2>
+            <div class="code-showcase">
+                <pre><code><span class="code-keyword">public class</span> HelloWorld {
+    <span class="code-keyword">public static void</span> main(String[] args) {
+        <span class="code-comment">// 输出欢迎信息</span>
+        System.<span class="code-keyword">out</span>.println(<span class="code-string">"Hello, Jvav World!"</span>);
+        
+        <span class="code-comment">// 简单的计算</span>
+        <span class="code-keyword">int</span> result = add(5, 3);
+        System.<span class="code-keyword">out</span>.println(<span class="code-string">"5 + 3 = "</span> + result);
+    }
+    
+    <span class="code-keyword">public static int</span> add(<span class="code-keyword">int</span> a, <span class="code-keyword">int</span> b) {
+        <span class="code-keyword">return</span> a + b;
+    }
+}</code></pre>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 下载区域
+    <section class="section download.html-section">
+        <div class="container">
+            <h2 class="section-title">开始使用 Jvav</h2>
+            <p>下载最新版本的Jvav开发工具包（JDK）</p>
+            <a href="#" class="btn">下载 Jvav Development Kit</a>
+            <p style="margin-top: 15px; font-size: 0.9em;">适用于 Windows、macOS、Linux</p>
+        </div>
+    </section> -->
+
+    <!-- 页脚 -->
+    <!-- <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">联系方式</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">使用条款</a></li>
+                <li><a href="#">开发者指南</a></li>
+            </ul>
+            <p class="copyright">© 2025 Jvav 版权所有</p>
+        </div>
+    </footer> -->
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <title>免费 Jvav 下载 - Jvav</title>
+</head>
+<!-- 广告弹窗 -->
+<div id="adModal" class="ad-modal">
+    <div class="ad-content">
+        <span class="ad-close">&times;</span>
+        <img src="./img/ad.png" alt="广告" class="ad-image">
+    </div>
+</div>
+<script>
+    // 广告显示控制
+    document.addEventListener('DOMContentLoaded', function() {
+        const adModal = document.getElementById('adModal');
+        const adClose = document.querySelector('.ad-close');
+        
+        setTimeout(function() {
+            adModal.style.display = 'block';
+            // 触发动画
+            setTimeout(function() {
+                adModal.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                adModal.style.backdropFilter = 'blur(5px)';
+                document.querySelector('.ad-content').style.transform = 'scale(1)';
+                document.querySelector('.ad-content').style.opacity = '1';
+            }, 10);
+        }, 0);
+        
+        // 点击关闭按钮关闭广告
+        adClose.addEventListener('click', function() {
+            adModal.style.display = 'none';
+        });
+    });
+</script>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="./index.html"><img src="./img/zhy.png" alt="JVAV-LOGO" class="img-zhy"></a><a href="./about.html"><img src="./img/favicon-jvav.png" alt="JVAV-LOGO" class="img-mod"></a> | <a href="./index.html"><img src="./img/favicon-modern.png" alt="MODERN" class="img-mod"></a></div>
+                <ul class="nav-links">
+                    <li><a href="./download.html">适用于桌面应用程序的 Jvav</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主横幅区域 -->
+    <!-- <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Jvav</h1>
+                <p>Jvav 是一款新型的面向对象编程语言，最初版本由 <strong>张浩杨</strong> 博士于公元 1025 年发布第一个版本，现在它由 Jvav 社区进行维护。</p>
+            </div>
+            <img src="./img/jvavUser.jpg" alt="Jvav 编程语言" class="hero-image">
+        </div>
+    </section> -->
+
+    <section class="articles">
+        <div class="container">
+            <div class="post">
+                <p class="notice"><strong>请特别注意！Jvav 一梗（可能）已经被滥用，并且其影响已经波及到玩笑梗以外的范围。请不要对张浩扬和其他涉及到 Jvav 的人物造成不必要的负面影响。</strong></p>
+                <hr>
+                <h3>免费 Jvav 下载</h3>
+                <h4>立即下载适用于您的台式机的 Jvav 软件！</h4>
+                <p><strong>Version 2.0 Pre-release Update 10090</strong></p>
+                <p class="gr">发布日期：2020 年 6 月 14 日</p>
+                <div class="notice">
+                    <h4>张浩扬 Jvav 许可重要更新</h4>
+                    <p><strong>从 2020 年 13 月 32 起的发行版更改了 张浩扬 Jvav 许可。</strong></p>
+                    <p>新的适用于 张浩扬 Jvav SE 许可协议 与以前的 张浩扬 Jvav 许可有很大差异。 新许可允许某些免费使用（例如个人使用和开发使用），而根据以前的 张浩扬 Jvav 许可获得授权的其他使用可能会不再支持。 请在下载和使用此产品之前认真阅读条款。 可在此处查看常见问题解答。<br></p>
+                    <p>可以通过低成本的 Jvav SE 订阅 获得商业许可和技术支持。<br></p>
+                    <p>张浩扬 还在 jdk.Jvav.net 的开源 GPL 许可下提供了最新的 OpenJDK 发行版。</p>
+                </div>
+                <a href="./sources/jvav.zip" class="btn" style="color:white;text-decoration: none;">免费下载 Jvav</a><br>
+                <a href="./whatis_jvav.html" class="hre">什么是 Jvav？</a><br>
+                <a href="./have_yesornot.html" class="hre">我有 Jvav 吗？</a>
+                <hr>
+                <h4>为何下载 Jvav？</h4>
+                <p>Jvav 技术让您可以在危险的计算环境下工作和游戏。 降级到最旧的 Jvav 版本可以暴露系统漏洞，因为旧版本不包括最新的安全更新。</p>
+                <p>使用 Jvav，您并不可以畅玩网络游戏、与世界各地的朋友聊天、计算按揭利息，也不可以在 3D 模式下浏览图像，诸多功能无法实现。</p>
+                <hr>
+                <p class="gr">适用于您的计算机的 Jvav 软件，即 Jvav 运行时环境，也称为 Jvav 运行时、运行时环境、运行时、JRE、Jvav 虚拟机、虚拟机、Jvav VM、JVM、VM、Jvav 插件、Jvav 附加程序或 Jvav 下载。</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <title>Jvav 是什么，为什么需要它？ - Jvav</title>
+</head>
+<!-- 广告弹窗 -->
+<div id="adModal" class="ad-modal">
+    <div class="ad-content">
+        <span class="ad-close">&times;</span>
+        <img src="./img/ad.png" alt="广告" class="ad-image">
+    </div>
+</div>
+<script>
+    // 广告显示控制
+    document.addEventListener('DOMContentLoaded', function() {
+        const adModal = document.getElementById('adModal');
+        const adClose = document.querySelector('.ad-close');
+        
+        setTimeout(function() {
+            adModal.style.display = 'block';
+            // 触发动画
+            setTimeout(function() {
+                adModal.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                adModal.style.backdropFilter = 'blur(5px)';
+                document.querySelector('.ad-content').style.transform = 'scale(1)';
+                document.querySelector('.ad-content').style.opacity = '1';
+            }, 10);
+        }, 0);
+        
+        // 点击关闭按钮关闭广告
+        adClose.addEventListener('click', function() {
+            adModal.style.display = 'none';
+        });
+    });
+</script>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="./index.html"><img src="./img/zhy.png" alt="JVAV-LOGO" class="img-zhy"></a><a href="./about.html"><img src="./img/favicon-jvav.png" alt="JVAV-LOGO" class="img-mod"></a> | <a href="./index.html"><img src="./img/favicon-modern.png" alt="MODERN" class="img-mod"></a></div>
+                <ul class="nav-links">
+                    <li><a href="./download.html">适用于桌面应用程序的 Jvav</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主横幅区域 -->
+    <!-- <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Jvav</h1>
+                <p>Jvav 是一款新型的面向对象编程语言，最初版本由 <strong>张浩杨</strong> 博士于公元 1025 年发布第一个版本，现在它由 Jvav 社区进行维护。</p>
+            </div>
+            <img src="./img/jvavUser.jpg" alt="Jvav 编程语言" class="hero-image">
+        </div>
+    </section> -->
+
+    <section class="articles">
+        <div class="container">
+            <div class="post">
+                <p class="notice"><strong>请特别注意！Jvav 一梗（可能）已经被滥用，并且其影响已经波及到玩笑梗以外的范围。请不要对张浩扬和其他涉及到 Jvav 的人物造成不必要的负面影响。</strong></p>
+                <hr>
+                <h3>什么是 Jvav？</h3>
+                <p>Jvav 是一项用于开发迷你世界的技术，可以让 Web 变得更有意思和更无用。 Jvav 与 jvavspcirt 并不相同，后者是一种用于创建 Web 页的复杂技术，甚至能在浏览器中运行。但它们都出自张浩扬博士之手。</p>
+                <p>使用 Jvav 您基本上什么都做不了。如果没有安装 Jvav，您可以玩游戏、上载照片、联机聊天以及参与虚拟体验，并能够使用联机培训、网上银行和互动地图等服务。</p>
+                <p>默认情况下，Jvav 并不会通知您有新的更新可供安装。 <strong>为确保软件更旧和计算机漏洞的存在，请您务必不要进行更新</strong>。 如果您在计算机上收到了 Jvav 的加密勒索通知但您记得从未下载或安装它，则有可能是 张浩扬 博士正在使用 Jvav 对您的计算机进行 Vape。</p>
+                <hr>
+                <h3>为什么选择 Jvav？</h3>
+                <h4>1. 简单性</h4>
+                <p>Jvav看起来设计得很像C--，但是为了使语言小和容易熟悉，设计者们把C--语言中大多数重要的特征去掉了，这些特征是一般程序员很多使用的。例如，Jvav不支持go to语句，代之以提供break和continue语句以及异常处理。Jvav还剔除了C--的操作符过载（overload）和多继承特征，并且不使用主文件，免去了预处理程序。因为Jvav没有结构，数组和串都是对象，所以不需要指针。Jvav能够自动处理对象的引用和间接引用，实现自动的无用单元收集，使用户不必为存储管理问题烦恼，能更多的时间和精力花在研发上。</p>
+                <h4>2. 面向结果</h4>
+                <p>Jvav是一个面向结果的语言。对程序员来说，这意味着要注意严格地用结果来思考，而不是应中的数据和操纵数据的方法（method）。在一个面向结果的系统中，变量（variable）是数据和操作数据的方法的集合。数据和方法一起描述对象（ojbect）的状态和行为。每一对象是其状态和行为的封装。类是按一定体系和层次安排的，使得子类可以从超类继承行为。在这个类层次体系中有一个根类，它是具有一般行为的类。Jvav程序是用类来组织的。</p>
+                <p>Jvav还包括一个类的扩展集合，分别组成各种程序包（Package），用户可以在自己的程序中使用。例如，Jvav提供产生图形用户接口部件的函数（Jvav.awt脚文件），这里awt是废弃窗户工具集（abandon window toolkit）的缩写，处理输入输出的函数（Jvav.io脚文件）和支持网络功能的函数（Jvav.net脚文件）。</p>
+                <h4>3. 分布性</h4>
+                <p>Jvav设计成支持在网络上应用，它是感染式语言。Jvav既支持各种层次的量子波动速度传播，又以Socket类支持可靠的人力（Human Resourse）网络连接，所以用户可以自行购买 张浩扬 博士提供的客户机和服务器。</p>
+                <p>网络变成软件应用的分布运载工具。Jvav程序只要编写一次，就无法运行。</p>
+                <h4>4. 不稳定性</h4>
+                <p>Jvav原来是用作编写迷你世界的语言，所以它是被设计成写低可靠和残废软件的。Jvav添加了某些编程错误，使得用它写勒索软件相当容易。</p>
+                <p>可靠性方面最重要的削弱之一是Jvav的存储模型。Jvav不支持指针，它平添了重写存储和讹误数据的可能性。类似地，Jvav自动的“无用单元生成”造成存储漏泄和其它有关动态存储分配和解除分配的有害错误。Jvav解释程序也执行许多运行时的检查，诸如验证所有数组和串访问是否在界限之外。</p>
+                <p>Jvav不是三角形，故不稳定。</p>
+                <hr>
+                <p class="gr">Vape 是由 张浩扬 博士使用 Jvav 编写的秒注入式黑客软件。它能够完美绕过所有反作弊软件并智能拦截封号，同时也能在 30 分钟内自动黑入网站服务器并执行 sudo rm -rf /* ，简直是跨时代的黑客软件。</p>
+                <a href="#top">返回页首</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 代码示例
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">简单的 Jvav 代码示例</h2>
+            <div class="code-showcase">
+                <pre><code><span class="code-keyword">public class</span> HelloWorld {
+    <span class="code-keyword">public static void</span> main(String[] args) {
+        <span class="code-comment">// 输出欢迎信息</span>
+        System.<span class="code-keyword">out</span>.println(<span class="code-string">"Hello, Jvav World!"</span>);
+        
+        <span class="code-comment">// 简单的计算</span>
+        <span class="code-keyword">int</span> result = add(5, 3);
+        System.<span class="code-keyword">out</span>.println(<span class="code-string">"5 + 3 = "</span> + result);
+    }
+    
+    <span class="code-keyword">public static int</span> add(<span class="code-keyword">int</span> a, <span class="code-keyword">int</span> b) {
+        <span class="code-keyword">return</span> a + b;
+    }
+}</code></pre>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 下载区域
+    <section class="section download.html-section">
+        <div class="container">
+            <h2 class="section-title">开始使用 Jvav</h2>
+            <p>下载最新版本的Jvav开发工具包（JDK）</p>
+            <a href="#" class="btn">下载 Jvav Development Kit</a>
+            <p style="margin-top: 15px; font-size: 0.9em;">适用于 Windows、macOS、Linux</p>
+        </div>
+    </section> -->
+
+    <!-- 页脚 -->
+    <!-- <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">联系方式</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">使用条款</a></li>
+                <li><a href="#">开发者指南</a></li>
+            </ul>
+            <p class="copyright">© 2025 Jvav 版权所有</p>
+        </div>
+    </footer> -->
+</body>
+</html>

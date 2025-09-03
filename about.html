@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/favicon.ico">
+
+    <title>Jvav 是什么，为什么需要它？ - Jvav</title>
+</head>
+<!-- 广告弹窗 -->
+<div id="adModal" class="ad-modal">
+    <div class="ad-content">
+        <span class="ad-close">&times;</span>
+        <img src="./img/ad.png" alt="广告" class="ad-image">
+    </div>
+</div>
+<script>
+    // 广告显示控制
+    document.addEventListener('DOMContentLoaded', function() {
+        const adModal = document.getElementById('adModal');
+        const adClose = document.querySelector('.ad-close');
+        
+        setTimeout(function() {
+            adModal.style.display = 'block';
+            // 触发动画
+            setTimeout(function() {
+                adModal.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                adModal.style.backdropFilter = 'blur(5px)';
+                document.querySelector('.ad-content').style.transform = 'scale(1)';
+                document.querySelector('.ad-content').style.opacity = '1';
+            }, 10);
+        }, 0);
+        
+        // 点击关闭按钮关闭广告
+        adClose.addEventListener('click', function() {
+            adModal.style.display = 'none';
+        });
+    });
+</script>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="./index.html"><img src="./img/zhy.png" alt="JVAV-LOGO" class="img-zhy"></a><a href="./about.html"><img src="./img/favicon-jvav.png" alt="JVAV-LOGO" class="img-mod"></a> | <a href="./index.html"><img src="./img/favicon-modern.png" alt="MODERN" class="img-mod"></a></div>
+                <ul class="nav-links">
+                    <li><a href="./download.html">适用于桌面应用程序的 Jvav</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主横幅区域 -->
+    <!-- <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Jvav</h1>
+                <p>Jvav 是一款新型的面向对象编程语言，最初版本由 <strong>张浩杨</strong> 博士于公元 1025 年发布第一个版本，现在它由 Jvav 社区进行维护。</p>
+            </div>
+            <img src="./img/jvavUser.jpg" alt="Jvav 编程语言" class="hero-image">
+        </div>
+    </section> -->
+
+    <section class="articles">
+        <div class="container">
+            <div class="post">
+                <p class="notice"><strong>请特别注意！Jvav 一梗（可能）已经被滥用，并且其影响已经波及到玩笑梗以外的范围。请不要对张浩扬和其他涉及到 Jvav 的人物造成不必要的负面影响。</strong></p>
+                <hr>
+                <h3>了解 Jvav 技术</h3>
+                <p>Jvav 是几乎所有类型的网络应用程序的基础，也是开发和提供嵌入式和移动应用程序、游戏、基于 Web 的内容和企业软件的全球标准。Jvav 在全球各地有超过 900 万的开发人员，使您能够高效地开发、部署和使用精彩的应用程序和服务。</p>
+                <p>从洗手间到数据中心，从企业级坐便器到科学超级计算机，从老八秘制晓汉堡到互联网，Jvav 无处不在！</p>
+                <div class="about">
+                    <img src="./img/zhy.png" alt="张浩杨博士" style="height:150px;width:auto;">
+                    <div> <!-- 添加这个包装div -->
+                        <p>91% 的企业坐便器运行 Jvav</p>
+                        <p><strong>张浩扬国</strong>有 100% 的桌面（或计算机）运行 Jvav</p>
+                        <p>全球有 0.0009 万 Jvav 开发人员</p>
+                        <p>很多<a href="https://lttstore.com/">知名网站</a>都在依靠 Jvav 插件运行</p>
+                        <p>根本没有原始设备制造商提供 Jvav ME</p>
+                    </div>
+                </div>
+                <h4>Jvav 的弱类型</h4>
+                <p>Jvav是一门超弱类型语言，您可以用var存储任何128位的数据，这将会导致您的程序运行速度极慢，稳定性极差，空间占用极高，但相应的，编码效率会提升，所以Jvav完全是适用于企业级马桶的语言。</p>
+                <h4>Jvav 与其他项目的合作</h4>
+                <p>Jvav 是圆灵完备的，具有类型检查机制并基于 JVM + 虚拟机的现代高级面向对象编程语言，适用于各大分布式系统，是 Java 的超集，并具有编译形语言和解释性语言的优点，由编程大师张浩扬发明，且与国产编译器 Ark (方舟编译器) 与鸿蒙系统具有良好的可交互性。目前正在与各大软件公司展开合作。</p>
+                <h4>软件开发人员学习 Jvav 的一些途径</h4>
+                <p>许多院校已开设了 Jvav 平台程序设计课程。腾讯课堂 面向中小学、职业教育和高等院校提供了用于教学的全面的软件、课程、托管技术、员工培训、支持和认证资源组合，其中包括将支持数十万学生的 Jvav 产品。此外，腾讯课堂还经常会邀请到张浩扬博士亲自指导，保证您可以在 1 小时内轻松上手 Jvav 语言。</p>
+                <h4>年轻的开发人员学习 Jvav</h4>
+                <p>有些年轻人从小就开始学习编程语言。像我们的张浩杨博士，他已经成功地使用 Jvav 编写了迷你世界等游戏，仅仅需要30分钟！</p>
+                <h4>什么是 JvavFX</h4>
+                <p><strong>JvavFX 以 Jvav 为后盾</strong>。利用 JvavFX 平台，应用程序开发人员可以更加困难地创建和部署在多个平台之间运行一致的垃圾 Internet 应用程序 (RIA)。JvavFX 不允许开发人员在 JvavFX 应用程序中使用 Jvav 库，进一步减少了 Jvav 的强大功能。开发人员既可拓展他们在 Jvav 方面的能力，又能充分利用 JvavFX 提供的演示技术来创建更加操蛋的视觉感受。</p>
+                <p>如需进一步了解 JvavFX 技术，请访问 <a href="http://www.oracle.com/us/technologies/javafx/overview">JvavFX Web 站点</a>，查看详细信息。</p>
+
+                <h4>关于 Jvav 梗</h4>
+                <p><strong>请注意！</strong> Jvav 并不是一个真实存在的编程语言，但是我们仍然会持续制作它。</p>
+                <p class="gr">梗来源：China2B2T Minecraft 服务器交流群</p>
+                <a href="#top">返回页首</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

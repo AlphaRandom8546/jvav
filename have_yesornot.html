@@ -14,6 +14,7 @@
     <div class="ad-content">
         <span class="ad-close">&times;</span>
         <img src="./img/ad.png" alt="广告" class="ad-image">
+        <p style="color: rgb(255, 255, 255); font-size: 0.8rem;">来自赞助商的 Jvav 广告。</p>
     </div>
 </div>
 <script>
@@ -65,7 +66,8 @@
         // 添加加载动画
         const loadingContent = `
             <div style="text-align: center; padding: 20px;">
-                <i class="fa-regular fa-spinner fa-spin fa-spin-reverse"></i> 验证中...
+                <img src="./img/loading.png" alt="加载中" style="width: 40px; height: 40px; animation: spin 1s linear infinite;">
+                <p>验证中...</p>
             </div>
         `;
         
@@ -87,10 +89,13 @@
             
             // 创建并插入新内容
             const newContent = `
-                <div class="notice">祝贺您！我们并没有在您的计算机中查找到 Jvav 安装。</div>
+                <div class="notice"><h4>祝贺您！我们并没有在您的计算机中查找到 Jvav 安装。</h4>
                 <p>如果您已安装 Jvav 并且在验证时没有检测到，这说明您的配置非常正确。由于Jvav 的先进技术已经不能满足浏览器的插件的运行，因此您无法在此页面检测 Jvav 安装是否正确。</p>
-                <p>大多数情况下，张浩扬博士会统一修复 Jvav 的安装错误，并控制每台计算机进行 迷你世界 开发等应用。</p>
-                <p>如果您的反间谍软件提示 Jvav 存在病毒，请勿惊慌，因为它就是一个计算机病毒。</p>
+                <p>大多数情况下，张浩扬博士会统一修复 Jvav 的安装错误，并控制每台计算机进行 <strong>迷你世界</strong> 开发等应用。</p>
+                </div>
+                <hr>
+                <p class="gr">如果您的反间谍软件提示 Jvav 存在病毒，请勿惊慌，<strong style="color:red;">因为它就是一个计算机病毒</strong>。</p>
+                <hr>
                 <a href="./have_yesornot.html" class="hre">尝试重新验证 Jvav</a><br>
                 <a href="./download.html" class="hre">免费 Jvav 下载</a>
             `;
@@ -141,5 +146,7 @@
             </div>
         </div>
     </section>
+
+    <script src="./ani.js"></script>
 </body>
 </html>

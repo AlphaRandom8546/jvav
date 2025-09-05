@@ -1,3 +1,8 @@
+::selection {
+    background: #04536f;
+    color: #fff;
+}
+
         @font-face {
             font-family: 'JvavFont';
             src: url("./fonts/oraclesansvf.woff2") format("woff2");
@@ -13,6 +18,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'JvavFont', Arial, sans-serif;
+            caret-color: transparent;
         }
         
         body {
@@ -78,15 +84,27 @@
         .nav-links li {
             margin-left: 20px; /* 修改这一行，从25px改为20px */
         }
+
+        .nav-links li::selection {
+            background: #f29111;
+            color: #fff;
+        }
         
         .nav-links a {
             color: #ffffff;
             font-weight: 500;
-            transition: color 0.3s;
+            font-weight: normal;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .nav-links a::selection {
+            background: #f29111;
+            color: #fff;
         }
         
         .nav-links a:hover {
             color: #e76f00;
+            font-weight: bold;
         }
         
         .btn {
@@ -130,6 +148,7 @@
             align-items: center;
             min-height: 300px; /* 修改这一行，从400px改为300px */
         }
+        
 
         .hero .container {
             display: flex; /* 添加这一行 */
@@ -145,6 +164,11 @@
             text-align: left;
             position: relative;
             padding-bottom: 15px;
+        }
+
+        .hero h1::selection {
+            background: #f29111;
+            color: #fff;
         }
 
         .hero h1::after {
@@ -164,9 +188,25 @@
             text-align: left;
         }
 
+        .hero p::selection {
+            background: #f29111;
+            color: #fff;
+        }
+
+        .hero strong::selection {
+            background: #f29111;
+            color: #fff;
+        }
+
         .hero a {
             color: #e76f00;
             font-weight: bold;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .hero a::selection {
+            background: #f29111;
+            color: #fff;
         }
 
         .hero-content {
@@ -185,6 +225,14 @@
             max-width: 450px;
             height: auto;
             margin-left: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.1s ease-in-out;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
         
         /* 内容区域 */
@@ -222,8 +270,14 @@
             padding: 25px;
             width: 100%;
             max-width: 450px;
-            transition: transform 0.3s;
+            transition: all 0.1s ease-in-out;
             border: 1px solid #e0e0e0; /* 添加这一行 */
+        }
+
+        .feature-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #04536f; /* 添加这一行 */
         }
 
         .feature-card .hre {
@@ -232,11 +286,20 @@
             transition: color 0.3s;
         }
 
+        .feature-card .hre:hover {
+            color: #e76f00;
+        }
+
         .post .hre {
             font-size: 0.9rem;
             color: #04536f;
-            transition: color 0.3s;
+            transition: all 0.1s ease-in-out;
             text-decoration: none;
+        }
+
+        .post .hre:hover {
+            color: #e76f00;
+            text-decoration: underline;
         }
         
         .feature-card h3 {
@@ -279,6 +342,15 @@
     border-left: 4px solid #04536f;
 }
 
+@media (max-width: 768px) {
+    .post {
+        margin: 10px;
+        padding: 10px;
+        max-width: 750px;
+        width: 100%;
+    }
+}
+
 .about {
     display: flex; /* 添加这一行 */
     align-items: center; /* 添加这一行 */
@@ -317,10 +389,11 @@
     padding: 10px;
     margin: 15px 0;
 }
-        
+
 .post .gr{
     color: gray;
     font-size: 0.8rem;
+    transition: all 0.1s ease-in-out;
 }
 
 
@@ -338,6 +411,12 @@
     transition: background-color 0.1s ease, backdrop-filter 0.1s ease;
 }
 
+.ad-modal.show {
+    display: block;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
 .ad-content {
     position: relative;
     margin: 15% auto;
@@ -350,6 +429,11 @@
     transition: all 0.5s ease-in-out;
 }
 
+.ad-content.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
 .ad-close {
     position: absolute;
     right: 5%;
@@ -357,6 +441,11 @@
     font-size: 28px;
     cursor: pointer;
     color: #fff;
+    transition: all 0.1s ease-in-out;
+}
+
+.ad-close:hover {
+    transform: rotate(-90deg);
 }
 
 .ad-image {
@@ -364,4 +453,26 @@
     height: auto;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.1s ease-in-out;
+}
+
+.ad-image:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* padd {
+    margin: 5px;
+} */
+
+/* .code-inline {
+    background-color: #272727;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.95rem;
+} */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
